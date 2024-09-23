@@ -1,0 +1,54 @@
+.login-container {
+  background-color: var(--ternaryColor) ;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 30px ;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid var(--mainColor);
+  color:  var(--mainColor);
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.submit-btn:hover {
+  transition: 0.5s;
+  box-shadow: 0 0 20px var(--mainColor);
+  background-color:  var(--mainColor);
+  transform: scale(1.02)translateY(-0.1rem);
+  color: white;
+}
+

@@ -1,0 +1,36 @@
+<div class="example-container">
+  <div class="header" *ngIf="isLogged">
+    <div class="logo">
+      <button (click)="snav.toggle()" class="menu"><mat-icon>menu</mat-icon></button>
+      <img  src='assets/images/logoPeaceApp.png'>
+    </div>
+    <div class="buttons">
+      <mat-icon class="notifications">notifications</mat-icon>
+      <div class="profile-avatar">
+        <img src="assets/images/main_cloud.png" alt="Profile Image">
+      </div>
+    </div>
+
+  </div>
+  <mat-sidenav-container class="content" >
+    <mat-sidenav #snav [mode]="'side'">
+      <mat-nav-list *ngIf="isLogged">
+        <a
+          *ngFor="let item of menuItems"
+          routerLinkActive="active"
+          class="link"
+          (click)="setActiveItem(item);Navigate(item.name)"
+          [class.active]="activeItem === item"
+        >
+          <mat-icon>{{item.icon}}</mat-icon>{{item.name}}
+        </a>
+
+        <a (click)="Navigate('access')" class="link" id="back"><mat-icon>meeting_room</mat-icon>Login</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

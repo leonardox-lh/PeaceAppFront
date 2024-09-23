@@ -1,0 +1,39 @@
+<div class="content-space">
+  <div class="space"></div>
+
+  <div class="homeContent">
+
+    <div class="homeImg" *ngIf="iterate=='home'">
+      <img src="../../../../assets/images/main_cloud.png">
+    </div>
+    <app-register *ngIf="iterate=='register'"></app-register>
+    <app-login *ngIf="iterate=='login'"></app-login>
+    <div class="homeText" >
+      <h1>BIENVENIDO, SOMOS <span> Space App</span></h1>
+      <p>Somos una plataforma que proporciona un entorno seguro para nuestros usuarios, permitiendo informarles incidentes anteriores y
+        los mas recientes para enmarcar rutas mas seguras y viables.<br><br>
+        Asi mismo diferentes servicios como el de rutas seguras, reporte de incidentes, entre otros, son proporcionados para el beneficio.
+        <br><br><span>¡Únete a nuestra comunidad y se parte de la solución!</span>
+        <br><br>
+        <button class="btn-register">
+          <a (click)="setIterate('register')">Registrarse</a>
+        </button>
+        <button class="btn-register">
+          <a (click)="setIterate('login')">Iniciar Session</a>
+        </button>
+        <br><br>
+        También nos puedes visitar en:
+      </p>
+      <div class="socialMedia">
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://github.com/IEEE-Computer-Society-UPC" target="_blank"><i class="fab fab fa-github"></i></a>
+        <a href="https://www.instagram.com/ieee.cs.upc/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/ieee-cs-upc/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/@ieeecsupc" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=51986756770" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://discord.gg/R56jNEsMD8" target="_blank"><i class="fab fa-discord"></i></a>
+      </div>
+    </div>
+
+  </div>
+</div>
