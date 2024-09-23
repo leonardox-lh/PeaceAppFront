@@ -1,0 +1,8 @@
+.content-reports {
+  background: linear-gradient(rgba(255, 254, 254, 0.1), var(--backgroundColor)) fixed,
+  url('../../../../assets/images/fondo.jpg') no-repeat fixed;
+  background-size: cover;
+}
+.block{
+  height: 900px;
+}

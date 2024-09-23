@@ -1,0 +1,16 @@
+<div class="content_reports">
+  <mat-card *ngFor="let report of reports">
+    <div class="image_card_report">
+      <img src="assets/images/logoPeaceApp.png" alt="s">
+    </div>
+    <mat-card-content>
+      <mat-card-title>{{report.title}}</mat-card-title>
+      <mat-card-subtitle>{{report.date}}</mat-card-subtitle>
+      <p>{{report.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

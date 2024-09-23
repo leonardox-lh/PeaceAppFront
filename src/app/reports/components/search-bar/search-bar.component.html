@@ -1,0 +1,36 @@
+<div class="content_search">
+  <mat-form-field>
+    <mat-label>Buscar</mat-label>
+    <input matInput [(ngModel)]="searchTerm" placeholder="Escribe para buscar..." />
+    <button mat-icon-button matSuffix (click)="search()">
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <div class="content_sub_search">
+    <mat-form-field>
+      <mat-label>selecciona el dia</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Distrito</mat-label>
+      <input matInput [(ngModel)]="searchPlace" placeholder="Distrito" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Tipo de atentado</mat-label>
+      <mat-select>
+        <mat-option value="one">Robo</mat-option>
+        <mat-option value="two">Asesinato</mat-option>
+        <mat-option value="three">Secuestro</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+
+</div>
+
+
