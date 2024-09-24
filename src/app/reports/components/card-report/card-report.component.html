@@ -1,16 +1,20 @@
 <div class="content_reports">
   <mat-card *ngFor="let report of reports">
     <div class="image_card_report">
-      <img src="assets/images/logoPeaceApp.png" alt="s">
+      <img [src]="report.image" alt="s">
     </div>
     <mat-card-content>
       <mat-card-title>{{report.title}}</mat-card-title>
-      <mat-card-subtitle>{{report.date}}</mat-card-subtitle>
-      <p>{{report.description}}</p>
+      <mat-card-subtitle>{{report.fecha}}</mat-card-subtitle>
+      <p>{{report.distrito}}</p>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
+    <div class="content_button_report">
+      <button (click)="openOverlay(report)"  class="button_report">Ver detalle</button>
+    </div>
   </mat-card>
+  <div *ngIf="showOverlay">
+    <app-report-window [message]="'The request has been sent to the advisor, you will receive a notification very soon'"
+                       [report]=" reports[0] "
+                       (close)="closeOverlay()"></app-report-window>
+  </div>
 </div>

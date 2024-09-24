@@ -1,0 +1,24 @@
+<div class="overlay" >
+  <div class="window">
+    <span class="close-button" (click)="closeWindow()"><mat-icon>close</mat-icon></span>
+      <h2>{{report.title}} </h2>
+      <div class="image_card_report">
+        <img [src]="report.image" alt="s">
+      </div>
+      <div class="window_content_text">
+        <div class="colum1">
+          <h3>Tipo: {{report.tipo}}</h3>
+          <h3>Fecha: {{report.fecha}} </h3>
+          <h3>Hora: {{report.hora}}</h3>
+          <h3>Distrito: {{report.distrito}}</h3>
+          <h3>Dirección: {{report.direccion}}</h3>
+        </div>
+        <div class="colum2">
+          <h3>Descripción: {{report.description}}</h3>
+          <h4>Reportado por: {{report.usuario}}</h4>
+        </div>
+      </div>
+
+  </div>
+</div>
+

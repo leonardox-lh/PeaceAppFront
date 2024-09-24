@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Report} from "../../model/report";
 
 @Component({
   selector: 'app-card-report',
@@ -6,30 +7,55 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-report.component.css']
 })
 export class CardReportComponent {
-
-  reports = [
+  showOverlay = false;
+  reports:Report[]=[
     {
+      id: 1,
       title: 'Reporte de ventas',
+      image: '/assets/images/prueba.jpg',
+      tipo: 'Reporte',
+      fecha: '2021-09-01',
+      hora: '12:00',
+      distrito: 'Lima',
+      direccion: 'Av. Los Alamos 123',
       description: 'Reporte de ventas de la semana',
-      date: '2021-09-01',
-      icon: 'fas fa-chart-line',
-      url: '/reports/sales',
+      usuario: 'Juan Perez',
     },
     {
+      id: 2,
       title: 'Reporte de productos',
+      image: '../../../assets/images/prueba.jpg',
+      tipo: 'Reporte',
+      fecha: '2021-09-01',
+      hora: '12:00',
+      distrito: 'Lima',
+      direccion: 'Av. Los Alamos 123',
       description: 'Reporte de productos vendidos',
-      date: '2021-09-01',
-      icon: 'fas fa-box',
-      url: '/reports/products',
+      usuario: 'Juan Perez',
     },
     {
-      title: 'Reporte de usuarios',
-      description: 'Reporte de usuarios registrados',
-      date: '2021-09-01',
-      icon: 'fas fa-users',
-      url: '/reports/users',
+      id: 3,
+      title: 'Reporte de ventas',
+      image: '../../../assets/images/prueba.jpg',
+      tipo: 'Reporte',
+      fecha: '2021-09-01',
+      hora: '12:00',
+      distrito: 'Lima',
+      direccion: 'Av. Los Alamos 123',
+      description: 'Reporte de ventas de la semana',
+      usuario: 'Juan Perez',
     },
-  ];
+  ]
+  openOverlay(report:any) {
+    console.log('open overlay');
+
+    this.showOverlay = true;
+  }
+
+  closeOverlay() {
+    this.showOverlay = false;
+  }
+
   constructor() { }
 
 

@@ -25,6 +25,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatSelectModule} from "@angular/material/select";
+import { ReportWindowComponent } from './reports/components/report-window/report-window.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {MatSelectModule} from "@angular/material/select";
     ContactsComponent,
     ReportsComponent,
     SearchBarComponent,
-    CardReportComponent
+    CardReportComponent,
+    ReportWindowComponent
   ],
   imports: [
     BrowserModule,
